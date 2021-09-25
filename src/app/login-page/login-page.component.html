@@ -1,0 +1,23 @@
+<div class="card mt-5" style="margin:auto;width: 600px;margin-top: 10% !important;">
+    <div class="card-body">
+      <h5 class="card-title">Login Page</h5>
+
+      <div class="form-group">
+        <label >Username or Mail</label>
+        <input type="text" #username class="form-control" placeholder="Enter Email or Username ..." >
+      </div>
+      <div class="form-group">
+        <label >Password</label>
+        <input type="password" #password class="form-control" placeholder="Enter Email or Username ..." >
+      </div>   
+      <br>
+      <button type="submit" class="btn btn-primary" (click)="Login(username.value,password.value)" >Login</button>
+      <br>
+      <br>
+
+      <div class="form-group">
+        <a href="/register">Don't Have an Account Yet</a>
+
+      </div>
+    </div>
+  </div>

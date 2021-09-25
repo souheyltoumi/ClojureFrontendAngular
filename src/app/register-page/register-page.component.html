@@ -1,0 +1,30 @@
+<div class="card mt-5" style="margin:auto;width: 600px;margin-top: 10% !important;">
+    <div class="card-body">
+      <h5 class="card-title">Register</h5>
+      <div class="form-group">
+        <label >Email</label>
+        <input type="text" #email class="form-control" placeholder="Enter Email ...">
+      </div>
+      <div class="form-group">
+        <label >Username</label>
+        <input type="text" #username class="form-control" placeholder="Enter Username ...">
+      </div>
+      <div class="form-group">
+        <label >Password</label>
+        <input type="password"  #password class="form-control"  placeholder="Enter Password ...">
+      </div>   
+      <br>
+      <div class="text-center">
+        <input class="form-control" type="file" 
+                (change)="onChange($event)">
+    </div>
+      <br>
+      <button type="submit" class="btn btn-primary" (click)="Register(username.value,password.value,email.value)" >Register</button>
+      <br>
+      <div class="form-group">
+        <br>
+        <a href="/login">Already Have an Account</a>
+
+      </div>
+    </div>
+  </div>

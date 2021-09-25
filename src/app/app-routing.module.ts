@@ -1,7 +1,18 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule, Component } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { compilePipeFromMetadata } from '@angular/compiler';
+import { RegisterPageComponent } from './register-page/register-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
+const routes: Routes = [
+  {path:"home"  ,component:HomePageComponent},
+  {path:"register",component:RegisterPageComponent},
+  {path:"login",component:LoginPageComponent},
+  { path: '**', component: LoginPageComponent }
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

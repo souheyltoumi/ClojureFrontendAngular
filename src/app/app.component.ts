@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RestApiService } from './rest-api.service';
 
 @Component({
   selector: 'app-root',
