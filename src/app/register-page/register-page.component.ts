@@ -40,8 +40,8 @@ export class RegisterPageComponent implements OnInit {
         this.cookieService.set( 'authToken', response['token'] );
         this.RestApi.UserData = response["userdata"];
         this.router.navigateByUrl('/home');
-      }else{
-        alert(response)
+      }else if('login' in response && response['login']==false){
+        alert("Duplicated Keys Failed")
       }
     })
   }
